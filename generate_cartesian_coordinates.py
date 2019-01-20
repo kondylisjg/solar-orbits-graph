@@ -127,7 +127,7 @@ with open('earth.txt', 'w') as f:
         line = str(e_time[i])+" "+str(Ex[i])+" "+str(Ey[i])+" "+str(Ez[i])+'\n'
         f.write(line)
 
-with open('abnoba2d.txt', 'w') as f:
+with open('abnoba.txt', 'w') as f:
     for i in range(len(time)):
         line = str(time[i])+" "+str(Ax[i])+" "+str(Ay[i])+" "+str(Az[i])+'\n'
         f.write(line)
