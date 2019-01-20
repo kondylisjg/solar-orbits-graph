@@ -1,4 +1,4 @@
-%https://ssd.jpl.nasa.gov/sbdb.cgi#top
+% Data can be found here: https://ssd.jpl.nasa.gov/sbdb.cgi#top
 
 %SCALE OF THIS SIMULATION
 %# Assumed scale: 100 pixels = 1AU.
