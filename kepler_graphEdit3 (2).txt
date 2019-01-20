@@ -1,0 +1,35 @@
+%https://ssd.jpl.nasa.gov/sbdb.cgi#top
+
+%SCALE OF THIS SIMULATION
+%# Assumed scale: 100 pixels = 1AU.
+%AU = 1.496e8 km
+% 149598262
+% 6371 = 6.371e3 * 1,000 
+
+
+load('Earth.txt');
+load('abnoba2d.txt');
+
+xEarth = Earth(:,2);
+yEarth = Earth(:,3);
+zEarth = Earth(:,4);
+
+xA = abnoba2d(:,2);
+yA = abnoba2d(:,3);
+zA = abnoba2d(:,4);
+
+        figure(1);
+        clf;
+        for i = 1:length(abnoba2d)
+            plot3(0,0,0, 'yo');
+            grid;
+            hold on;        
+            HEO = plot3(xEarth,yEarth,zEarth);
+            plot3(xA, yA, zA, 'm--');
+	    k = mod(i-1, 365) + 1;
+            plot3(xEarth(k),yEarth(k),zEarth(k),'bo'); %earth
+            plot3(xA(i), yA(i), zA(i), 'ro'); %come
+            hold off;
+            pause(0.01);
+        end
+        load topo;
