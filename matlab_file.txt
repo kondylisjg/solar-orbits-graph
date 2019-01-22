@@ -1,4 +1,4 @@
-% Data can be found here: https://ssd.jpl.nasa.gov/sbdb.cgi#top
+%Data can be found here: https://ssd.jpl.nasa.gov/sbdb.cgi#top
 
 %SCALE OF THIS SIMULATION
 %# Assumed scale: 100 pixels = 1AU.
@@ -28,7 +28,7 @@ zA = abnoba2d(:,4);
             plot3(xA, yA, zA, 'm--');
 	    k = mod(i-1, 365) + 1;
             plot3(xEarth(k),yEarth(k),zEarth(k),'bo'); %earth
-            plot3(xA(i), yA(i), zA(i), 'ro'); %come
+            plot3(xA(i), yA(i), zA(i), 'ro'); %comet
             hold off;
             pause(0.01);
         end
